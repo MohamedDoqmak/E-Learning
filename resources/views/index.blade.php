@@ -67,7 +67,7 @@
                                 <div class="header-cat-menu ml-40 d-none d-md-block">
                                     <nav>
                                         <ul>
-                                            <li><a href="course-grid.html"> Categorie <span><i
+                                            <li><a href="course-grid.html"> @lang('components/header.Categories') <span><i
                                                             class="arrow_carrot-down"></i></span></a>
                                                 <ul class="sub-menu">
                                                     <li><a href="course-grid.html">Bangla Medium</a></li>
@@ -106,47 +106,25 @@
                                         </li>
 
                                         <li class="has-dropdown">
-                                            <a href="index.html">Home</a>
+                                            <a href="about.html">@lang('components/header.Pages')</a>
                                             <ul class="submenu">
-                                                <li><a href="index.html">Home Style 1</a></li>
-                                                <li><a href="index-2.html">Home Style 2</a></li>
-                                                <li><a href="index-3.html">Home Style 3</a></li>
+                                                <li><a href="about.html">@lang('components/header.About')</a></li>
+                                                <li><a href="contact.html">@lang('components/header.Contact')</a></li>
+                                                <li><a href="checkout.html">@lang('components/header.Checkout')</a></li>
+                                                <li><a href="faq.html">@lang('components/header.FAQ')</a></li>
+                                                <li><a href="register.html">@lang('components/header.Register')</a></li>
+                                                <li><a href="sign-in.html">@lang('components/header.Signin')</a></li>
                                             </ul>
                                         </li>
-                                        <li class="has-dropdown">
-                                            <a href="about.html">Pages</a>
-                                            <ul class="submenu">
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                                <li><a href="checkout.html">Check Out</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
-                                                <li><a href="register.html">Register</a></li>
-                                                <li><a href="sign-in.html">Sign In</a></li>
-                                            </ul>
+                                        <li>
+                                            <a href="instructor.html">@lang('components/header.Instructors')</a>
+
                                         </li>
-                                        <li class="has-dropdown">
-                                            <a href="instructor.html">Instructor</a>
-                                            <ul class="submenu">
-                                                <li><a href="instructor.html">Instructor</a></li>
-                                                <li><a href="instructor-profile.html">Instructor Profile</a></li>
-                                            </ul>
+                                        <li>
+                                            <a href="course-grid.html">@lang('components/header.Courses')</a>
                                         </li>
-                                        <li class="has-dropdown">
-                                            <a href="course-grid.html">Course</a>
-                                            <ul class="submenu">
-                                                <li><a href="course-grid.html">Course Grid</a></li>
-                                                <li><a href="course-list.html">Course List</a></li>
-                                                <li><a href="course-details.html">Course Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="blog.html">Blog</a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-grid.html">Blog Grid</a></li>
-                                                <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
+                                        <li>
+                                            <a href="blog.html">@lang('components/header.LatestBlogs')</a>
                                         </li>
                                     </ul>
                                 </nav>
