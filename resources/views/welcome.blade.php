@@ -410,12 +410,8 @@
         @endif
 
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <!-- Other navbar items -->
-
                         <!-- Language Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
@@ -432,8 +428,6 @@
                         </li>
                     </ul>
                 </div>
-            </nav>
-
             <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                 <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg"
                     class="h-16 w-auto text-gray-700 sm:h-20">
@@ -454,7 +448,7 @@
                                     d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                             </svg>
                             <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs"
-                                    class="underline text-gray-900 dark:text-white">{{__('messages.Documentation')}}</a></div>
+                                    class="underline text-gray-900 dark:text-white">@lang('messages.Documentation')</a></div>
                         </div>
 
                         <div class="ml-12">
