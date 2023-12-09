@@ -67,8 +67,8 @@
                                 <div class="header-cat-menu ml-40 d-none d-md-block">
                                     <nav>
                                         <ul>
-                                            <li><a href="course-grid.html"> @lang('components/header.Categories') <span><i
-                                                            class="arrow_carrot-down"></i></span></a>
+                                            <li><a href="course-grid.html"> @lang('components/header.Categories')
+                                                    <span><i class="arrow_carrot-down"></i></span></a>
                                                 <ul class="sub-menu">
                                                     <li><a href="course-grid.html">Bangla Medium</a></li>
                                                     <li><a href="course-grid.html">English Medium</a></li>
@@ -180,9 +180,10 @@
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-8">
                             <div class="hero-content hero-content-black">
-                                <h2 class="hero-title-black mb-45">Online Learning Designed For <br>Real Life</h2>
+                                <h2 class="hero-title-black mb-45">@lang('pages/index.OnlineLearningDesigned')
+                                    <br>@lang('pages/index.ForRealLife')</h2>
                                 <div class="hero-btn">
-                                    <a href="course-list.html" class="tp-btn">All Courses</a>
+                                    <a href="course-list.html" class="tp-btn">@lang('pages/index.AllCourses')</a>
                                 </div>
                             </div>
                         </div>
@@ -200,11 +201,11 @@
         <!-- feature-area -->
         <section class="feature-area pt-115 pb-90 wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
             <div class="container">
-                <div class="row">
+                <div class="row"dir="{{ $langDirection[App::getLocale()] }}">
                     <div class="col-lg-12">
-                        <div class="section-title mb-70">
-                            <span class="tp-bline-stitle mb-15">What We Offer</span>
-                            <h2 class="tp-section-title">For Your Future Learning.</h2>
+                        <div class="section-title mb-70" >
+                            <span class="tp-bline-stitle mb-15">@lang('pages/index.WhatWeOffer')</span>
+                            <h2 class="tp-section-title">@lang('pages/index.ForYourFutureLearning')</h2>
                         </div>
                     </div>
                 </div>
