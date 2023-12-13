@@ -21,6 +21,7 @@ return new class extends Migration {
             $table->text('description');
             $table->string('level');
             $table->string('thumbnail')->nullable();
+            $table->timestamps();
         });
     }
 
