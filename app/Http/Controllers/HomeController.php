@@ -19,9 +19,9 @@ class HomeController extends Controller
 
     public function index()
     {
-        $categoriesTranslations = $this->categoryService->getCategoriesTranslations();
+        $categoriesData = $this->categoryService->getCategoriesData();
         return view('index', [
-            'categoriesTranslations' => $categoriesTranslations,
+            'categoriesData' => $categoriesData,
         ]);
     }
 }

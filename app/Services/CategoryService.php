@@ -3,28 +3,39 @@
 namespace App\Services;
 
 use App\Models\Category;
+use Illuminate\Support\Facades\Cache;
 
 class CategoryService
 {
-
     public function getAllCategories()
     {
         return Category::all();
     }
-    public function getCategoriesTranslations()
+    public function getCategoriesData()
     {
-
-        $lang = session('applocale');
         $categories = $this->getAllCategories();
-        $translatedCategories = [];
 
-        foreach ($categories as $category) {
-            $translation = $category->translations->where('locale', $lang)->first();
-            $translatedCategories[] = [
-                'translation' => $translation ? $translation->name : null,
-                'defult_name' => $category->name,
+        return $categories->map(function ($category) {
+            return [
+                'translation' => $this->getTranslation($category),
+                'default_name' => $category->name,
+                'icon' => $this->getCategoryIcon($category),
             ];
-        }
-        return $translatedCategories;
+        })->all();
+    }
+    public function getTranslation($category)
+    {
+        $currentLocale = session('applocale');
+        $translation = $category->translations->where('locale', $currentLocale)->first();
+        return $translation ? $translation->name : null;
+
+    }
+    public function getCategoryIcon($category)
+    {
+        return Cache::remember('category_icon' . $category->id, now()->addHours(24),
+            function () use ($category) {
+                return $category->icon;
+            }
+        );
     }
 }

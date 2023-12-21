@@ -181,7 +181,8 @@
                         <div class="col-xl-6 col-lg-6 col-md-8">
                             <div class="hero-content hero-content-black">
                                 <h2 class="hero-title-black mb-45">@lang('pages/index.OnlineLearningDesigned')
-                                    <br>@lang('pages/index.ForRealLife')</h2>
+                                    <br>@lang('pages/index.ForRealLife')
+                                </h2>
                                 <div class="hero-btn">
                                     <a href="course-list.html" class="tp-btn">@lang('pages/index.AllCourses')</a>
                                 </div>
@@ -201,9 +202,9 @@
         <!-- feature-area -->
         <section class="feature-area pt-115 pb-90 wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".3s">
             <div class="container">
-                <div class="row"dir="{{ $langDirection[App::getLocale()] }}">
+                <div class="row" dir="{{ $langDirection[App::getLocale()] }}">
                     <div class="col-lg-12">
-                        <div class="section-title mb-70" >
+                        <div class="section-title mb-70">
                             <span class="tp-bline-stitle mb-15">@lang('pages/index.WhatWeOffer')</span>
                             <h2 class="tp-section-title">@lang('pages/index.ForYourFutureLearning')</h2>
                         </div>
@@ -397,117 +398,25 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
-                    <div class="col-xxl-3 col-lg-4 col-md-6">
-                        <div class="tp-cat-item mb-40 d-flex align-items-center">
-                            <div class="tp-category-icon tp-cat-color  mr-15">
-                                <span class="cat-design">
-                                    <img src="assets/img/category/category2-1.png" alt="category-img">
-                                </span>
-                            </div>
-                            <div class="tp-cat-content">
-                                <h4 class="tp-category-title tp-title-small"><a href="course-grid.html">Design</a></h4>
-                                <p>236 Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-lg-4 col-md-6">
-                        <div class="tp-cat-item mb-40 d-flex align-items-center">
-                            <div class="tp-category-icon tp-cat-color tp-cat-color mr-15">
-                                <span class="cat-deve">
-                                    <img src="assets/img/category/category2-2.png" alt="category-img">
-                                </span>
-                            </div>
-                            <div class="tp-cat-content">
-                                <h4 class="tp-category-title tp-title-small"><a href="course-grid.html">Development</a>
-                                </h4>
-                                <p>236 Courses</p>
+                    @foreach ($categoriesData as $category)
+                        <div class="col-xxl-3 col-lg-4 col-md-6">
+                            <div class="tp-cat-item mb-40 d-flex align-items-center">
+                                <div class="tp-category-icon tp-cat-color mr-15">
+                                    <span class="cat-design">
+                                        <img src="assets/{{ $category['icon'] }}" alt="category-img">
+                                    </span>
+                                </div>
+                                <div class="tp-cat-content">
+                                    <h4 class="tp-category-title tp-title-small">
+                                        <a href="course-grid.html">{{ $category['translation'] ?? $category['default_name'] }}</a>
+                                    </h4>
+                                    <p>236 Courses</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xxl-3 col-lg-4 col-md-6">
-                        <div class="tp-cat-item mb-40 d-flex align-items-center">
-                            <div class="tp-category-icon tp-cat-color mr-15">
-                                <span class="cat-market">
-                                    <img src="assets/img/category/category2-3.png" alt="category-img">
-                                </span>
-                            </div>
-                            <div class="tp-cat-content">
-                                <h4 class="tp-category-title tp-title-small"><a href="course-grid.html">Marketing</a>
-                                </h4>
-                                <p>236 Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-lg-4 col-md-6">
-                        <div class="tp-cat-item mb-40 d-flex align-items-center">
-                            <div class="tp-category-icon tp-cat-color mr-15">
-                                <span class="cat-it">
-                                    <img src="assets/img/category/category2-4.png" alt="category-img">
-                                </span>
-                            </div>
-                            <div class="tp-cat-content">
-                                <h4 class="tp-category-title tp-title-small"><a href="course-grid.html">Software</a>
-                                </h4>
-                                <p>236 Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-lg-4 col-md-6">
-                        <div class="tp-cat-item mb-40 d-flex align-items-center">
-                            <div class="tp-category-icon tp-cat-color mr-15">
-                                <span class="cat-video">
-                                    <img src="assets/img/category/category2-5.png" alt="category-img">
-                                </span>
-                            </div>
-                            <div class="tp-cat-content">
-                                <h4 class="tp-category-title tp-title-small"><a href="course-grid.html">Videography</a>
-                                </h4>
-                                <p>236 Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-lg-4 col-md-6">
-                        <div class="tp-cat-item mb-40 d-flex align-items-center">
-                            <div class="tp-category-icon tp-cat-color mr-15">
-                                <span class="cat-business">
-                                    <img src="assets/img/category/category2-6.png" alt="category-img">
-                                </span>
-                            </div>
-                            <div class="tp-cat-content">
-                                <h4 class="tp-category-title tp-title-small"><a href="course-grid.html">Business</a>
-                                </h4>
-                                <p>236 Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-lg-4 col-md-6">
-                        <div class="tp-cat-item mb-40 d-flex align-items-center">
-                            <div class="tp-category-icon tp-cat-color mr-15">
-                                <span class="cat-photo">
-                                    <img src="assets/img/category/category2-7.png" alt="category-img">
-                                </span>
-                            </div>
-                            <div class="tp-cat-content">
-                                <h4 class="tp-category-title tp-title-small"><a href="course-grid.html">Photography</a>
-                                </h4>
-                                <p>236 Courses</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-lg-4 col-md-6">
-                        <div class="tp-cat-item mb-40 d-flex align-items-center">
-                            <div class="tp-category-icon tp-cat-color mr-15">
-                                <span class="cat-music">
-                                    <img src="assets/img/category/category2-8.png" alt="category-img">
-                                </span>
-                            </div>
-                            <div class="tp-cat-content">
-                                <h4 class="tp-category-title tp-title-small"><a href="course-grid.html">Music</a></h4>
-                                <p>236 Courses</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
