@@ -9,7 +9,7 @@ use Spatie\Translatable\HasTranslations;
 class Category extends Model
 {
     use HasFactory, HasTranslations;
-    protected $fillable = ['name','icon'];
+    protected $fillable = ['name', 'icon'];
     public $translatable = ['name'];
     public function courses()
     {

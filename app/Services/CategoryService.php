@@ -18,8 +18,8 @@ class CategoryService
         return $categories->map(function ($category) {
             return [
                 'translation' => $this->getTranslation($category),
-                'default_name' => $category->name,
-                'icon' => $this->getCategoryIcon($category),
+                'default' => $category,
+                'icon' => $this->getIcon($category),
             ];
         })->all();
     }
@@ -27,10 +27,10 @@ class CategoryService
     {
         $currentLocale = session('applocale');
         $translation = $category->translations->where('locale', $currentLocale)->first();
-        return $translation ? $translation->name : null;
+        return $translation;
 
     }
-    public function getCategoryIcon($category)
+    public function getIcon($category)
     {
         return Cache::remember('category_icon' . $category->id, now()->addHours(24),
             function () use ($category) {
