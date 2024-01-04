@@ -6,7 +6,10 @@ use App\Models\Course;
 
 class CourseService
 {
-    public function getAllcourses()
+    public function getLatestCourses()
     {
+        return Course::latest()->take(6)->get();
     }
+
+
 }

@@ -20,8 +20,11 @@ class HomeController extends Controller
     public function index()
     {
         $categoriesData = $this->categoryService->getCategoriesData();
+        $coursesData = $this->courseService->getLatestCourses();
+
         return view('index', [
             'categoriesData' => $categoriesData,
+            'coursesData' => $coursesData,
         ]);
     }
 }
