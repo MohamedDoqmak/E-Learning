@@ -91,20 +91,19 @@
                 <div class="row text-center text-lg-start">
                     <div class="col-xl-3 col-lg-3">
                         <div class="f-copyright__logo mb-30">
-                            <a href="#"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                            <a href="#"><img src="{{ $footerData['logo'] }}" alt="logo"></a>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5">
                         <div class="f-copyright__text text-center mb-30">
-                            <span>Uxaction© 2022, All Rights Reserved</span>
+                            <span>{{ $footerData['copyRights'] }}</span>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4">
                         <div class="f-copyright__social-area mb-20 text-lg-end">
-                            <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="#"><i class="fi fi-rr-basketball"></i></a>
-                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                            @foreach ($footerData['socialLinks'] as $platform=>$link )
+                            <a href="{{$link}}" target="_blank"><i class="fa-brands fa-{{ $platform }}"></i></a>
+                            @endforeach
                         </div>
                     </div>
                 </div>

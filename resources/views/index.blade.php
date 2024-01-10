@@ -5,8 +5,6 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
       <![endif]-->
 
-@vite('resources/js/app.js')
-
 <!-- pre loader area start -->
 <div id="loading">
     <div id="loading-center">

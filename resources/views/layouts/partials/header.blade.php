@@ -7,24 +7,8 @@
                         <div class="logo-area d-flex align-items-center">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo-black.png" alt="logo">
+                                    <img src="{{ $headerData['logo'] }}" alt="logo">
                                 </a>
-                            </div>
-                            <div class="header-cat-menu ml-40 d-none d-md-block">
-                                <nav>
-                                    <ul>
-                                        <li><a href="course-grid.html"> @lang('components/header.Categories')
-                                                <span><i class="arrow_carrot-down"></i></span></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="course-grid.html">Bangla Medium</a></li>
-                                                <li><a href="course-grid.html">English Medium</a></li>
-                                                <li><a href="course-grid.html">Video Edition</a></li>
-                                                <li><a href="course-grid.html">Logo Design</a></li>
-                                                <li><a href="course-grid.html">Francy Medium</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
                             </div>
                         </div>
                     </div>
@@ -50,27 +34,22 @@
                                             @endforeach
                                         </ul>
                                     </li>
-
                                     <li class="has-dropdown">
-                                        <a href="about.html">@lang('components/header.Pages')</a>
+                                        <a href="pages.html">@lang('components/header.Pages')</a>
                                         <ul class="submenu">
-                                            <li><a href="about.html">@lang('components/header.About')</a></li>
-                                            <li><a href="contact.html">@lang('components/header.Contact')</a></li>
-                                            <li><a href="checkout.html">@lang('components/header.Checkout')</a></li>
-                                            <li><a href="faq.html">@lang('components/header.FAQ')</a></li>
-                                            <li><a href="register.html">@lang('components/header.Register')</a></li>
-                                            <li><a href="sign-in.html">@lang('components/header.Signin')</a></li>
+                                            @foreach ($headerData['pages'] as $pageLink =>$pageName)
+                                            <li><a href="{{ $pageLink }}.html">@lang("$pageName")</a></li>
+                                            @endforeach
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="instructor.html">@lang('components/header.Instructors')</a>
-
+                                        <a href="instructor.html">@lang($headerData[ "instructor" ])</a>
                                     </li>
                                     <li>
-                                        <a href="course-grid.html">@lang('components/header.Courses')</a>
+                                        <a href="course-grid.html">@lang($headerData[ "course-grid" ])</a>
                                     </li>
                                     <li>
-                                        <a href="blog.html">@lang('components/header.LatestBlogs')</a>
+                                        <a href="blog.html">@lang($headerData[ "blog" ])</a>
                                     </li>
                                 </ul>
                             </nav>
