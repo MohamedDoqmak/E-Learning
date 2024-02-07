@@ -3,25 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\CategoryService;
-use App\Services\CourseService;
+use App\Models\Category;
+use App\Models\Course;
 
 class HomeController extends Controller
 {
-    protected $categoryService;
-    protected $courseService;
-
-    public function __construct(CategoryService $categoryService, CourseService $courseService)
-    {
-        $this->categoryService = $categoryService;
-        $this->courseService = $courseService;
-    }
 
     public function index()
     {
-        $categoriesData = $this->categoryService->getCategoriesData();
-        $coursesData = $this->courseService->getLatestCourses();
-
+        $categoriesData =Category::all();
+        $coursesData = Course::all();
+        // both Category::all(); and Course::all(); should be removed and refactored
         return view('index', [
             'categoriesData' => $categoriesData,
             'coursesData' => $coursesData,
