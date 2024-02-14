@@ -26,7 +26,7 @@ class LayoutDataServiceProvider extends ServiceProvider
     {
         View::composer('layouts.partials.header', function ($view) {
             $headerData = [
-                'logo' => 'assets/img/logo/logo-black.png',
+                'logo' => '/assets/img/logo/logo-black.png',
                 'pages' => [
                     'about' => 'components/header.About',
                     'contact' => 'components/header.Contact',
@@ -51,7 +51,7 @@ class LayoutDataServiceProvider extends ServiceProvider
                     'laravel' => 'https://www.laravel.com',
                 ],
                 'copyRights' => 'Uxaction© 2022, All Rights Reserved',
-                'logo' => 'assets/img/logo/logo.png',
+                'logo' => '/assets/img/logo/logo.png',
             ];
             $view->with('footerData', $footerData);
         });
